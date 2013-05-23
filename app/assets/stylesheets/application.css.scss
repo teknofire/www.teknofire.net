@@ -1,0 +1,86 @@
+@import 'bootstrap';
+@import 'font-awesome';
+@import url(http://fonts.googleapis.com/css?family=Alef);
+
+html, body {
+  font-family: 'Alef', sans-serif;
+  padding: 0px; margin: 0px; 
+  height: 100%;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 5px dashed #efefef;
+}
+.footer section { border-bottom: none; padding-bottom: 0; }
+
+.header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  margin-top:0px;
+  width:100%;
+  border:1px solid #EFEFEF;  
+  height: 200px;
+  text-align: center;
+  @include transition(margin-top 1s ease);
+  @include box-shadow(0px 1px 5px #888);
+}
+
+.header .nav { margin: 0; }
+
+.header .nav > li > a {
+  font-size: 20px;  
+  line-height: 24px;
+  margin: 0;  
+  color: #333;
+}
+
+
+.header img {
+  margin:0 0 30px 0;
+  height: 125px;
+}
+
+.header h1 {
+  margin:0px;
+  padding: 50px 0 5px 0;
+  height: 100px;
+  
+  small {
+    text-transform: capitalize;
+    
+  }
+}
+
+.header.small {
+  margin-top: -150px;
+}
+
+.footer {
+  border-top: 1px solid #efefef;
+  @include box-shadow(0px 1px 5px #888);
+  min-height: 260px;
+  margin-top:100px;
+  color: #DDD;
+  padding-top: 25px;
+  background: #252528;
+  .bottom { padding: 35px 0; text-align:center; }
+  .social { font-size: 64px; display: inline-block; margin:0; }
+  .copyright { text-align: center; }
+}
+
+.splash {
+  padding-top: 350px;
+  height: 100%;
+  background: url(/assets/npp.12117.2228_truecolor_aa_900.jpg) no-repeat;
+  background-size: 100% 100%;
+  @include box-sizing(border-box);
+  
+  .intro {
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+  }
+}
