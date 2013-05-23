@@ -11,8 +11,11 @@
     #home
     .header
       .container
-        = render 'layouts/header'
-    .no-splash
+        = render 'layouts/welcome_header'
+    .splash
+      .intro
+        .container
+          = yield :splash
     .container
       = yield
     .footer

@@ -6,6 +6,7 @@ html, body {
   font-family: 'Alef', sans-serif;
   padding: 0px; margin: 0px; 
   height: 100%;
+  background: #fafafa;
 }
 
 section {
@@ -69,6 +70,10 @@ section {
   .bottom { padding: 35px 0; text-align:center; }
   .social { font-size: 64px; display: inline-block; margin:0; }
   .copyright { text-align: center; }
+}
+
+.no-splash {
+  padding-top: 200px;
 }
 
 .splash {
