@@ -1,0 +1,40 @@
+%h3 
+  PostGIS Frenzy
+  %span.small :: 5/23/2013
+:markdown
+  * Read and Write GeoJSON, KML, plus all the other good stuff
+  * linear referencing
+    * Good for stuff like DOT and Fish people where they say things are located at mile 10 of a highway or at a particular distance down a river
+    * ST_LocateAlong, ST_LocateBetween, ST_AddMeasure
+  * Curves
+    * ST_LineToCurve!!!
+  * Reprojections
+    * ST_Transform
+  * Geography
+    * Good to dealing with modeling data on a sphere
+    * Only has a small number of functions (15 native)
+      * Intersects, Distance, DWithin, Area 
+    * Cast to another geometry to get the others
+    * Indexes spherical data
+    * new gui loader for shapefiles
+  * 3d types
+    * support volumes
+    * triangle, tin, polyhedrals
+    * AsX3D, AsGML, AsText, AsBinary
+    * now support 3d and 4d indexing (2.0)
+  * Added support for rasters
+    * Evelope, ConvexHull, Polygon
+  * Topology (2.0)
+    * Good for simplifying things that have shared edges
+  * Indexed KNN (nearest neighbor) (2.0)
+    * ORDER BY geom <-> (SELECT geom FROM ...) LIMIT 10
+  * Validity Reporting
+    * ESRI vs OGC method of handling polygons
+    * IsValidReason, IsValid
+    * ST_MakeValid() (2.0)
+  * Perfomance improvements (2.1)
+    * Raster ST_Union(), navtive implementation (2.1)
+    * 10x faster ish
+    * Geography ST_Distance and ST_DWithin ~ 30x faster
+    * New R-Tree spitter
+    * ND Indexes

@@ -18,7 +18,7 @@
 $(document).on('ready', function() {
   $(window).scroll(function() {
     var pos = $(window).scrollTop();
-    if(pos > 10) { 
+    if(pos > 40) { 
       $('.header').addClass('small'); 
     } else {
       $('.header').removeClass('small');
