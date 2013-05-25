@@ -1,0 +1,38 @@
+%h3 
+  Openlayers3
+  %span.small :: 5/22/2013
+:markdown
+  * 2D and 3D performance
+    * Canvas and WebGL
+  * Projections are 1st class object
+  * om.Map and om.View
+  * om.layer and om.source
+    * seperate the layer config from the source config
+    * setup the same layer but pull from different sources
+    * sources can be async configured
+    * can be setup to configure the tile/wms source on the fly by pulling capabilities
+    * tile queue is based on the cursor
+  * om.interaction
+    * drag, rotate, keyboardpan, touchzoom, etc...
+  * om.control
+    * zoom, buttons, scaleline, attribution, etc...
+  * ol.Overlay
+    * Method to have things anchored to the map
+    * can be used with bootstrap popover
+  * ol.animation
+    * panning and kinetic movement
+    * strong animation framework
+    * spin the map
+    * bounce
+    * fly
+  * Vectors and 2D rendering
+    * indexing by deometry type and bounds (R-Tree)
+    * render by tiles
+    * interacting with features
+      * same api for all layer types
+    * 20000 features was just about instant
+    * Vector Format Parsers
+      * GeoJSON, asycn loading api
+  * Closure Compiler
+    * Tomorrows talk about OL3 will cover this
+  
