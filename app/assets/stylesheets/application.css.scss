@@ -1,3 +1,4 @@
+@import 'compass';
 @import 'bootstrap';
 @import 'font-awesome';
 @import url(http://fonts.googleapis.com/css?family=Alef);
@@ -76,16 +77,33 @@ section {
   padding-top: 200px;
 }
 
+.hidden { display: none; }
+
+.menu { position: relative; text-align: left; }
+
+#main-menu {
+//  @include transition(all 1s ease);
+  display: inline-block;
+  position: absolute;
+  
+  &.right {
+    right: 0;
+  }
+}
+
 .splash {
   padding-top: 350px;
   height: 100%;
-  background: url(/assets/npp.12117.2228_truecolor_aa_900.jpg) no-repeat;
-  background-size: 100% 100%;
+  background: url(/assets/npp.12117.2228_truecolor_aa_900.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   @include box-sizing(border-box);
   
   .intro {
     color: #fff;
     text-align: center;
-    text-shadow: 2px 2px 5px #000;
+    text-shadow: 0px 0px 4px rgba(0,0,0,1), 0px 0px 8px rgba(0,0,0,0.8), 0px 0px 12px rgba(0,0,0,0.8);
   }
 }

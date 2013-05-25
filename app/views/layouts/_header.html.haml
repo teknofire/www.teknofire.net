@@ -1,12 +1,13 @@
 = render 'layouts/title'
 
-%ul.nav.nav-pills.pull-left.scroller
-  %li
-    = link_to '/#home' do
-      %i.icon-home
-      Home 
-  %li
-    = link_to '/#blog' do
-      %i.icon-microphone
-      Blog
-  = render 'layouts/page_nav'
+.menu
+  %ul#main-menu.nav.nav-pills.scroller
+    %li
+      = link_to '/#home' do
+        %i.icon-home
+        Home 
+    %li
+      = link_to '/#blog' do
+        %i.icon-microphone
+        Blog
+    = render 'layouts/page_nav'
