@@ -1,0 +1,23 @@
+%table.table.table-bordered.table-stripped
+  %thead
+    %tr
+      %td{colspan:3, style: 'padding:0px;'}
+        .navbar.navbar-static-top
+          .navbar-inner
+            .brand Admin::Notes
+            .pull-right
+              = link_to new_admin_note_path, class: 'btn btn-success' do
+                %i.icon-plus
+                New Note
+    %tr
+      %th Title
+      %th Last Updated
+      %th Actions
+  %tbody
+    - @notes.each do |note|
+      %tr
+        %td= note.title
+        %td= note.updated_at
+        %td
+          = link_to edit_admin_note_path(note), class: 'btn btn-primary' do
+            %i.icon-edit

@@ -1,0 +1,7 @@
+%section{ id: dom_id(note) }
+  %h3 
+    = note.title
+    %span.small
+      = ":: #{note.updated_at.strftime('%Y.%m.%d')}"
+  :markdown
+    #{note.content}

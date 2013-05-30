@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require welcome
+//= require ace_editor
+
+
+$(document).on('ready', function() {
+  $('[data-editor="ace"]').each(function() {
+    console.log('test');
+    new AceEditor(this);
+  });
+});

@@ -1,0 +1,30 @@
+= form_for [:admin, @note] do |f|
+  - if @note.errors.count > 0
+    .alert.alert-error
+      %h3 Error while trying to save the note
+      %ul
+        - @note.errors.full_messages.each do |msg|
+          %li= msg
+  .control-group
+    = f.label :title, class: 'control-label'
+    .controls
+      = f.text_field :title, class: 'span12'
+  .control-group
+    = f.label :content, class: 'control-label'
+    .controls.ace{ data: { editor: 'ace', mode: 'markdown' } }
+      .navbar.navbar-static-top
+        .navbar-inner
+          .btn-group
+            %button.btn.btn-small{ type: 'button', title: 'Undo', data: { action: 'undo' } }
+              %i.icon-undo
+            %button.btn.btn-small{ type: 'button', title: 'Redo', data: { action: 'redo' } }
+              %i.icon-repeat
+    
+      = f.text_area :content, class: 'span12', rows: 15
+      
+  .form-actions
+    = link_to admin_notes_path, class: 'btn' do
+      %i.icon-arrow-left
+      Cancel
+    .pull-right
+      = f.submit class: 'btn btn-primary'

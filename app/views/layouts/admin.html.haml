@@ -2,12 +2,12 @@
 %html
   %head
     %title TeknofireNet
-    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "admin", :media => "all"
     /[if lt IE 8]
       = stylesheet_link_tag "font-awesome-ie7.min.css", media: "all"
-    = javascript_include_tag "application"
+    = javascript_include_tag "admin", "http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js"
     = csrf_meta_tags
-  %body{ class: hide_header? ? 'hide_header' : '' }
+  %body.hide_header
     #home
     .header
       .container
@@ -18,6 +18,3 @@
     .footer
       .container
         = render 'layouts/footer'
-:javascript
-  $(document).ready(function() {
-  });
