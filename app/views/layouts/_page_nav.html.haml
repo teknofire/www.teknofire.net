@@ -6,3 +6,13 @@
   = link_to 'http://github.com/teknofire' do
     %i.icon-github
     Code
+- if signed_in?
+  %li
+    = link_to signout_path do
+      %i.icon-signout
+      Signout
+- else
+  %li
+    = link_to signin_path do
+      %i.icon-signin
+      Signin

@@ -13,13 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jasny-bootstrap
 //= require welcome
 //= require ace_editor
+//= require turbolinks
 
-
-$(document).on('ready', function() {
+var initAceEditors = function() {
   $('[data-editor="ace"]').each(function() {
-    console.log('test');
     new AceEditor(this);
   });
+}
+
+$(document).on('ready', function() {
+  initAceEditors();
+  $(document).on('page:load', initAceEditors);  
 });

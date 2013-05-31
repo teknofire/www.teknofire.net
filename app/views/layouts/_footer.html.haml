@@ -1,13 +1,5 @@
 .row-fluid
-  .span6
-    %section#links
-      %h3 Links
-      %address
-        %b Work:
-        = link_to 'Geographic Information Network of Alaska', 'http://www.gina.alaska.edu'
-  .span6    
-.row-fluid
-  .span12.bottom
+  .span12{style: "text-align: center;"}
     %ul.nav.nav-pills.social
       %li
         = mail_to 'will@teknofire.net', '<i class="icon-envelope"></i>'.html_safe
@@ -20,6 +12,11 @@
       %li
         = link_to 'http://github.com/teknofire', target: :_blank do
           %i.icon-github
-      %li
-        = link_to '/login', target: :_blank do
-          %i.icon-signin
+.row-fluid
+  .span6
+    %section#links
+      %h3 Links
+      %address
+        %b Work:
+        = link_to 'Geographic Information Network of Alaska', 'http://www.gina.alaska.edu'
+  .span6

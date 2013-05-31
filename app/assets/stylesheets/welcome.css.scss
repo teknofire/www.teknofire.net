@@ -10,7 +10,7 @@ html, body {
 }
 
 section {
-  padding-top: 50px;
+  padding-top: 25px;
   padding-bottom: 50px;
   border-bottom: 5px dashed #efefef;
 }
@@ -79,13 +79,13 @@ body.hide_header {
 .footer {
   border-top: 1px solid #efefef;
   @include box-shadow(0px 1px 5px #888);
-  min-height: 260px;
-  margin-top:100px;
+  min-height: 200px;
+  margin-top:50px;
   color: #DDD;
-  padding-top: 25px;
+  padding-top: 10px;
   background: #252528;
-  .bottom { padding: 35px 0; text-align:center; }
-  .social { font-size: 64px; display: inline-block; margin:0; }
+  .bottom { padding: 15px 0; text-align:center; }
+  .social { font-size: 32px; display: inline-block; margin:0; }
   .copyright { text-align: center; }
 }
 

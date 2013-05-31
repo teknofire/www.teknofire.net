@@ -8,8 +8,11 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'haml-rails'
 gem 'bootstrap-sass'
+gem 'jasny_bootstrap_extension_rails'
 gem 'font-awesome-rails'
 gem 'redcarpet'
+gem 'omniauth-openid'
+gem 'turbolinks'
 
 # Gems used only for assets and not required
 # in production environments by default.

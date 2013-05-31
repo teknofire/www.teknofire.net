@@ -12,6 +12,8 @@
     .header
       .container
         = render 'layouts/header'
+    .page-alert
+      = flash_messages        
     .no-splash
     .container
       = yield
