@@ -1,6 +1,24 @@
 - content_for :splash do
-  %h2 Relaunch of the site
-  %p.lead Welcome to the site relaunch.  I'm going to quickly start putting some things together after inspiration from the FOSS4G conference has finished exploding.
-  
+  .row-fluid
+    .span6
+      .well
+        %h3 
+          %i.icon-smile
+          Hello
+        %p My name is Will and I'm very excited about Ruby on Rails, web development and mapping.
+    .span6
+      .well
+        %h3 
+          %i.icon-wrench
+          What I do
+        %p 
+          I work for the 
+          = link_to 'http://www.gina.alaska.edu', target: :_blank do
+            Geographic Information Network of Alaska
+            %i.icon-external-link
+          doing development and project management.
+        %p 
+          My primary work involves working with GIS data and doing web development using Ruby on Rails and various JavaScript technologies.
+        
 %section#blog
   %h1 Stay tuned while we adjust the antenna
