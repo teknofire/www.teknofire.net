@@ -1,21 +1,21 @@
 - content_for :splash do
-  .row-fluid
-    .span6
-      .well
+  .row
+    .col-lg-6
+      #home.well
         %h3 
-          %i.icon-smile
+          = fa_icon "smile"
           Hello
         %p My name is Will and I'm very excited about Ruby on Rails, web development and mapping.
-    .span6
+    .col-lg-6
       .well
         %h3 
-          %i.icon-wrench
+          = fa_icon "wrench"
           What I do
         %p 
           I work for the 
           = link_to 'http://www.gina.alaska.edu', target: :_blank do
             Geographic Information Network of Alaska
-            %i.icon-external-link
+            = fa_icon "external-link"
           doing development and project management.
         %p 
           My primary work involves working with GIS data and doing web development using Ruby on Rails and various JavaScript technologies.

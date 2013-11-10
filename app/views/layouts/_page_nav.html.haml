@@ -1,18 +1,18 @@
 %li
   = link_to notes_path do
-    %i.icon-edit
+    = fa_icon 'edit'
     Notes
 %li
   = link_to 'http://github.com/teknofire' do
-    %i.icon-github
+    = fa_icon 'github'
     Code
 - if signed_in?
   %li
     = link_to signout_path do
-      %i.icon-signout
+      = fa_icon 'signout'
       Signout
 - else
   %li
     = link_to signin_path do
-      %i.icon-signin
+      = fa_icon 'signin'
       Signin

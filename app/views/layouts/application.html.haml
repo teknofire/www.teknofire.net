@@ -5,8 +5,7 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body{ class: hide_header? ? 'hide_header' : '' }
-    #home
+  %body.hide_header
     .header
       .container
         = render 'layouts/header'

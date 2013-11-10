@@ -5,13 +5,13 @@
         = mail_to 'will@teknofire.net', '<i class="icon-envelope"></i>'.html_safe
       %li
         = link_to 'http://twitter.com/teknofire', target: :_blank do
-          %i.icon-twitter
+          = fa_icon "twitter"
       / %li
       /   = link_to '#', target: :_blank do
-      /     %i.icon-facebook
+      /     = fa_icon "facebook"
       %li
         = link_to 'http://github.com/teknofire', target: :_blank do
-          %i.icon-github
+          = fa_icon "github"
 .row-fluid
   .span6
     %section#links

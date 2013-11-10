@@ -28,6 +28,10 @@ section {
   z-index: 10;
   @include transition(margin-top 1s ease);
   @include box-shadow(0px 1px 5px #888);
+  @include opacity(0.9);
+  
+  .title { font-size: 36px; padding: 34px; }
+  .title .byline { font-size: 24px; color: #555; }
 }
 
 .header .nav { margin: 0; }
@@ -91,21 +95,15 @@ body.hide_header {
 
 .hidden { display: none; }
 
-.menu { position: relative; text-align: left; }
-
 #main-menu {
-//  @include transition(all 1s ease);
-  display: inline-block;
-  position: absolute;
-  
   &.right {
     right: 0;
   }
 }
 
 .splash {
-  padding-top: 350px;
-  height: 100%;
+  padding-top: 250px;
+  min-height: 800px;
   background: url(/assets/npp.12117.2228_truecolor_aa_900.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;

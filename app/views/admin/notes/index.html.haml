@@ -7,7 +7,7 @@
             .brand Admin::Notes
             .pull-right
               = link_to new_admin_note_path, class: 'btn btn-success' do
-                %i.icon-plus
+                = fa_icon "plus"
                 New Note
     %tr
       %th Title
@@ -20,4 +20,4 @@
         %td= note.updated_at
         %td
           = link_to edit_admin_note_path(note), class: 'btn btn-primary' do
-            %i.icon-edit
+            = fa_icon "edit"

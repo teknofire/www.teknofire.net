@@ -15,4 +15,3 @@
 //= require bootstrap
 //= require jasny-bootstrap
 //= require welcome
-//= require turbolinks

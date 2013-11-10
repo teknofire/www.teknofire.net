@@ -3,15 +3,13 @@
   %head
     %title TeknofireNet
     = stylesheet_link_tag    "application", :media => "all"
-    /[if lt IE 8]
-      = stylesheet_link_tag "font-awesome-ie7.min.css", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     #home
     .header
       .container
-        = render 'layouts/welcome_header'
+        = render 'layouts/header'
     .page-alert
       = flash_messages
     .splash
@@ -25,8 +23,10 @@
 :javascript
   $(document).ready(function() {
     $(document).on('click', '[data-scroll]', function(evt) {
+      var target = $(evt.currentTarget).data('scroll');
+      if(!$(target)) { return; }
+      
       evt.preventDefault();
-      var target = $(evt.currentTarget).attr('href');
       
       var parent = $('html,body');
       var cur_scroll = parent.scrollTop();

@@ -25,8 +25,10 @@ $(document).on 'ready', =>
   scrollHeader();
   
   $(document).on 'click', '[data-scroll]', (evt) ->
+    target = $(evt.currentTarget).data('scroll')
+    return unless $(target).length > 0
+        
     evt.preventDefault()
-    target = $(evt.currentTarget).attr('href')
     
     parent = $('html,body')
     cur_scroll = parent.scrollTop()
