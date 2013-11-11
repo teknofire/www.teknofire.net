@@ -2,7 +2,7 @@
   = render 'layouts/title'
 
 .menu
-  %ul.nav.nav-pills
+  %ul.nav.nav-pills.pull-left
     %li
       = link_to '/#home', data: { scroll: '#home' } do
         = fa_icon 'home'
@@ -12,8 +12,7 @@
         = fa_icon 'microphone'
         Blog
     = render 'layouts/page_nav'
-    
-  %ul.nav.nav-pills.hidden
+  %ul#small-title.pull-right.nav.nav-pills{ style: 'display: none;' }
     %li
       = link_to root_url do
         = fa_icon 'fire'
